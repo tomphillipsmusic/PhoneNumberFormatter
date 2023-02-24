@@ -8,7 +8,7 @@
 import Foundation
 
 /*
-    You will write a function that takes in an Int and formats it as an American mobile phone number. The function will return an optional String. If the given number can be formatted correctly, return the formatted String. If the number cannot be formatted correctly return nil
+    You will write a function that takes in a String of digits and formats it as an American mobile phone number. The function will return an optional String. If the given number can be formatted correctly, return the formatted String. If the number cannot be formatted correctly return nil
  
     The American mobile phone number format typically consists of ten digits, written as three groups of numbers separated by hyphens. The format is:
 
@@ -20,25 +20,24 @@ import Foundation
 
      (123) 456-7890
  
-    
+     Sample inputs / outputs
 
-    Sample inputs / outputs
+     1234567890 -> "(123) 456-7890"
+     8675309 -> nil
+     12345678900 -> nil
+     123456789 -> nil
+     1 -> nil
  
-    1234567890 -> "(123) 456-7890"
-    8675309 -> nil
-    12345678900 -> nil
-    123456789 -> nil
-    1 -> nil
- 
+     If you have it working see if you add validation that the only characters in the input strings are digits 0 through 9!
  */
-func format(phoneNumber: Int) -> String? {
+func format(phoneNumber: String) -> String? {
     // TODO: Write your implementation of the function
     return nil
 }
 
-assert(format(phoneNumber: 1234567890) == Optional("(123) 456-7890)"))
-assert(format(phoneNumber: 8675309) == nil)
-assert(format(phoneNumber: 12345678900) == nil)
-assert(format(phoneNumber: 123456789) == nil)
-assert(format(phoneNumber: 1) == nil)
-assert(format(phoneNumber: 0987654321) == Optional("(098) 765-4321)"))
+assert(format(phoneNumber: "1234567890") == Optional("(123) 456-7890)"))
+assert(format(phoneNumber: "8675309") == nil)
+assert(format(phoneNumber: "12345678900") == nil)
+assert(format(phoneNumber: "123456789") == nil)
+assert(format(phoneNumber: "1") == nil)
+assert(format(phoneNumber: "0987654321") == Optional("(098) 765-4321)"))
